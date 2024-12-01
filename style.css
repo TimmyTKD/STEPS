@@ -103,7 +103,7 @@ header {
 
         button:hover {
             cursor: pointer;
-            background-color: #b4c5e4;
+            background-color: #090c9b;
         }
     }
 }
@@ -172,7 +172,7 @@ header {
 
     div {
         padding-top: 35px;
-        width: 30%;
+        width: 32%;
         border-radius: 10px;
     }
 
@@ -180,8 +180,9 @@ header {
         padding: 10px;
 
         a:hover {
-            color: #090c9b;
             cursor: pointer;
+            transition: 0.2s;
+            background-color: #090c9b;
         }
 
         ul {
