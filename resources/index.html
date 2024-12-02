@@ -2,23 +2,6 @@
     <head>
         <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
         <link rel="stylesheet" href="/style.css">
-    
-        <script>
-            function search() {
-                var input = document.getElementById("search").value;
-                input = input.toLowerCase();
-                var x = document.getElementsByClassName("university");
-                for (i = 0; i < x.length; i++) {
-                    if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                        x[i].style.display = "none";
-                    } else {
-                        x[i].style.display = "flex";
-                    }
-                }
-            }
-
-            document.getElementById("search").addEventListener("keyup", search);
-        </script>
     </head>
     <body>
         <header>
@@ -32,7 +15,7 @@
         
         <div class="container">
             <h1>Resources</h1>
-            <h2>STEPS growing database stores information about the many universities which high school students may choose to apply to. Our database includes specific information for multiple universities</h2>
+            <h2>STEPS growing database stores information about the many universities which high school students may choose to apply to. Our database includes specific information for multiple universities. If don't know which university to apply to, try out the <a href="/tools">Find Your University</a> tool provided.</h2>
             <div class="search">
                 <img src="/search.png">
                 <input id="search" type="text" placeholder="Search for University"></input>
@@ -40,47 +23,61 @@
 
             <div id="universities">
                 <div class="university">
-                    <h3>Harvard<h3>
-                    <h2>Location: Massachusetts Hall, Cambridge, MA 02138, USA<h2>
-                    <h2>Strongest Subject: Law<h2>
-                    <h2>Number of Students:<h2>
-                    <h2>Financial Aid:<h2>
-                    <h2>Type of University:<h2>
-                    <h2>Global Ranking:<h2>
-                    <h2>Costs:<h2>
-                    <h2>Available Programs:<h2>
-                    <h2>Internships:<h2>
-                    <h2>Pathways:<h2>
-                </div>
-                
-                <div class="university">
-                    <h3>Waterloo<h3>
-                    <h2>Location:<h2>
-                    <h2>Strongest Subject:<h2>
-                    <h2>Number of Students:<h2>
-                    <h2>Financial Aid:<h2>
-                    <h2>Type of University:<h2>
-                    <h2>Global Ranking:<h2>
-                    <h2>Costs:<h2>
-                    <h2>Available Programs:<h2>
-                    <h2>Internships:<h2>
-                    <h2>Pathways:<h2>
+                    <div>
+                        <h3>Harvard<h3>
+                        <h2>Location: Massachusetts Hall, Cambridge, MA 02138, USA<h2>
+                        <h2>Strongest Subject: Computer Science<h2>
+                        <h2>Costs: $83,538<h2>
+                        <h2><a href="https://www.harvard.edu/programs/">Available Programs</a><h2>
+                        <h2><a href="https://www.harvard.edu/search/?q_as=internships">Internships</a><h2>
+                    </div>
+                    <img src="harvard.png">
                 </div>
 
                 <div class="university">
-                    <h3>Western<h3>
-                    <h2>Location:<h2>
-                    <h2>Strongest Subject:<h2>
-                    <h2>Number of Students:<h2>
-                    <h2>Financial Aid:<h2>
-                    <h2>Type of University:<h2>
-                    <h2>Global Ranking:<h2>
-                    <h2>Costs:<h2>
-                    <h2>Available Programs:<h2>
-                    <h2>Internships:<h2>
-                    <h2>Pathways:<h2>
+                    <div>
+                        <h3>Waterloo<h3>
+                        <h2>Location: Massachusetts Hall, Cambridge, MA 02138, USA<h2>
+                        <h2>Strongest Subject: Computer Science<h2>
+                        <h2>Costs: $83,538<h2>
+                        <h2><a href="https://www.harvard.edu/programs/">Available Programs</a><h2>
+                        <h2><a href="https://www.harvard.edu/search/?q_as=internships">Internships</a><h2>
+                    </div>
+                    <img src="waterloo.png">
                 </div>
+
+                <div class="university">
+                    <div>
+                        <h3>Western<h3>
+                        <h2>Location: Massachusetts Hall, Cambridge, MA 02138, USA<h2>
+                        <h2>Strongest Subject: Computer Science<h2>
+                        <h2>Costs: $83,538<h2>
+                        <h2><a href="https://www.harvard.edu/programs/">Available Programs</a><h2>
+                        <h2><a href="https://www.harvard.edu/search/?q_as=internships">Internships</a><h2>
+                    </div>
+                    <img src="western.png">
+                </div>
+
             </div>
         </div>
+
+        <footer>©2024 STEPS Edu. All rights reserved.</footer>
     </body>
+
+    <script>
+        function search() {
+            var input = document.getElementById("search").value;
+            input = input.toLowerCase();
+            var x = document.getElementsByClassName("university");
+            for (i = 0; i < x.length; i++) {
+                if (!x[i].children[0].children[0].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display = "none";
+                } else {
+                    x[i].style.display = "flex";
+                }
+            }
+        }
+
+        document.getElementById("search").addEventListener("keyup", search);
+    </script>
 </html>
