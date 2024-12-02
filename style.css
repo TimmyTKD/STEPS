@@ -11,6 +11,7 @@ html, body {
     width: 100%;
     min-height: 100%;
     padding-bottom: 20px;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -162,10 +163,29 @@ header {
     div {
         width: 50%;
     }
+    
     img {
         width: 50%; 
         border-radius: 12px; 
         height: max-content;
+    }
+
+    button {
+        margin-top: calc(3px + 2vw);
+        background-color: #6799ea;
+        color: #fbfff1;
+        border-radius: 5px;
+        padding: calc(5px + 0.4vw) calc(10px + 0.8vw);
+        font-size: calc(10px + 0.8vw);
+        border: none;
+        user-select: none;
+        margin-top: 10px;
+        transition: background-color 0.2s;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: #7463b3;
     }
 }
 
@@ -196,6 +216,7 @@ header {
         font-size: calc(15px + 1vw);
         padding: 0;
         margin: 0;
+        line-height: normal;
     }
 
     div {
