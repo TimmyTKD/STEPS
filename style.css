@@ -26,7 +26,7 @@ h2 {
 h3 {
     color: #090c9b;
     font-size: 2.7vw;
-    font-weight: 200;
+    font-weight: 100;
 }
 
 .container {
@@ -35,7 +35,6 @@ h3 {
     padding-right: 12.5%;
     box-sizing: border-box;
     align-items: center;
-    min-height: 100%;
 }
 
 header {
@@ -250,6 +249,7 @@ footer {
 .items {
     display: flex;
     gap: 20px;
+    margin-bottom: calc(10px + 1.5vw);
 
     a {
         width: calc(90px + 15vw);
@@ -292,11 +292,11 @@ footer {
     gap: 10px;
     outline: 0.2px grey solid;
     border-radius: 6px;
-    margin-top: 20px;
+    margin-top: calc(15px + 0.5vw);
 
     
     img {
-        height: calc(8px + 1vw);
+        height: 13px;
     }
 
     input {
@@ -308,30 +308,44 @@ footer {
 
 #universities {
     display: flex;
+    width: 110%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
     align-self: start;
-    gap: 60px 20px;
-    margin-top: 30px;
+    gap: calc(17px + 1.3vw) calc(10px + 1.3vw);
+    margin-top: calc(30px + 1vw);
 }
 
 .university {
     display: flex;
-    flex: 1 1 25%;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 47%;
     border-radius: 5px;
-    flex-direction: column;
-    align-items: left;
-    padding-left: 25px;
-    padding-bottom: 10px;
-    outline: 0.1px solid #090c9b;
-    background: linear-gradient(45deg, #4e50e95e, #1c68e369);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2),0 2px 9px -1px rgba(0,0,0,0),0 1px 1px 0 rgba(0,0,0,.03);
+    overflow: hidden;
+    padding: 0px 0px;
+
+    div {
+        padding-left: 1.5vw;
+        margin-bottom: calc(2.2px + 0.4vw);
+    }
+
+    img {
+       width: 35%;
+       padding-left: 10px;
+    }
 
     h3 {
-        margin-bottom: 10px;
+        font-size: calc(1px + 1.6vw);
+        margin-top: calc(3px + 0.5vw);
+        margin-bottom: calc(2px + 0.4vw);
     }
 
     h2 {
-        margin-bottom: 0px;
+        font-size: calc(0.8px + 0.8vw);
+        margin-top: calc(2px + 0.3vw);
+        margin-bottom: calc(2px + 0.3vw);
     }
 }
